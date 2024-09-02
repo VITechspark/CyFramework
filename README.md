@@ -1,14 +1,8 @@
 # Cypress Framework Template 
-## By **Mohammad Monfared** | [LinkedIn](https://www.linkedin.com/in/mohammad-monfared) | [YouTube](https://www.youtube.com/automationcamp) | [Website](http://www.monfared.io/)
-## Workshop Record: [YouTube Video](https://www.youtube.com/watch?v=9o7LZRmj2zc)
+## By **Vishnuvardhan** | [LinkedIn](https://www.linkedin.com/in/dalavai-vishnuvardhan) |  | [Website](http://vitechspark.com/)
+## Workshop Record: available.....soon......
 ---
 ## Description:
-We have a simple ToDo application deployed in different environments:
-
-Dev Environment: http://devtodo.monfared.io/
-
-Stag Environment: http://stagtodo.monfared.io/
-
 Using Cypress, we will create a test automation framework with the following features:
 
 - The Page Object Model is a pattern
@@ -55,8 +49,8 @@ npx cypress open
 ### Install
 
 ```
-npm install @bahmutov/cypress-esbuild-preprocessor --save-dev
-npm install @badeball/cypress-cucumber-preprocessor --save-dev
+npm install @VITechspark/cypress-esbuild-preprocessor --save-dev
+npm install @VITechspark/cypress-cucumber-preprocessor --save-dev
 ```
 
 ### add to config
@@ -65,9 +59,9 @@ npm install @badeball/cypress-cucumber-preprocessor --save-dev
 
 ```javascript
 const { defineConfig } = require("cypress");
-const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
-const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
-const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
+const createBundler = require("@VITechspark/cypress-esbuild-preprocessor");
+const preprocessor = require("@VITechspark/cypress-cucumber-preprocessor");
+const createEsbuildPlugin = require("@VITechspark/cypress-cucumber-preprocessor/esbuild");
 
 module.exports = defineConfig({
   e2e: {
@@ -155,7 +149,7 @@ class TodoPage {
 `cypress/support/step_definitions/steps.js`
 
 ```javascript
-import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
+import { Given, When, Then } from '@VITechspark/cypress-cucumber-preprocessor'
 
 import TodoPage from '../../e2e/pages/todoPage/todoPage'
 
@@ -237,12 +231,12 @@ Feature: Check todos and verifying them to be checked
 
 ```json
 "scripts": {
-    "cy:dev:chrome": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser chrome --record",
-    "cy:stag:chrome": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser chrome --record",
-    "cy:dev:firefox": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser firefox --record",
-    "cy:stag:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser firefox --record",
-    "cy:headed": "cypress run --config baseUrl=http://devtodo.monfared.io/ --headed",
-    "cy:test": "cypress run --config baseUrl=http://devtodo.monfared.io/"
+    "cy:dev:chrome": "cypress run --config baseUrl=http://vitechspark.com/ --browser chrome --record",
+    "cy:stag:chrome": "cypress run --config baseUrl=http://vitechspark.com/ --browser chrome --record",
+    "cy:dev:firefox": "cypress run --config baseUrl=http://vitechspark.com/ --browser firefox --record",
+    "cy:stag:firefox": "cypress run --config baseUrl=http://vitechspark.com/ --browser firefox --record",
+    "cy:headed": "cypress run --config baseUrl=http://vitechspark.com/ --headed",
+    "cy:test": "cypress run --config baseUrl=http://vitechspark.com/"
   }
 ```
 
@@ -251,7 +245,7 @@ Feature: Check todos and verifying them to be checked
 ```javascript
 Given('I open the Todo page app', () => {
     cy.visit('/')
-    // cy.visit('http://stagtodo.monfared.io/')
+    // cy.visit('http://vitechspark.com/')
     cy.contains('Environment Todo')
   })
 ```
